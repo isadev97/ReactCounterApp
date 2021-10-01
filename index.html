@@ -15,18 +15,18 @@
     
       function App() {
       	const [cnt,setCnt] = useState(0)
-        const handleClick = () => {
-        	setCnt(cnt+1)
+        const handleClick = (val) => {
+        	setCnt(cnt+val)
         }
         return (
         <>
         <div>
         	{cnt}
         </div>
-        <button>
+        <button onClick={ () => handleClick(1) }>
         	Increment
         </button>
-        <button>
+        <button onClick={ () => handleClick(-1) }>
         	Decrement
         </button>
         </>
