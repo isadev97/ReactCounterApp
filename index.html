@@ -15,10 +15,21 @@
     
       function App() {
       	const [cnt,setCnt] = useState(0)
+        const handleClick = () => {
+        	setCnt(cnt+1)
+        }
         return (
+        <>
         <div>
         	{cnt}
         </div>
+        <button>
+        	Increment
+        </button>
+        <button>
+        	Decrement
+        </button>
+        </>
         );
       }
       
